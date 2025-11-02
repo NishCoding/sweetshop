@@ -2,9 +2,8 @@ from sqlalchemy.orm import Session
 from app import models, schemas
 from app.utils.security import get_password_hash, verify_password
 
-# ----- SWEETS -----
 def create_sweet(db: Session, sweet: schemas.SweetCreate):
-    db_sweet = models.Sweet(**sweet.model_dump())  # use model_dump() for Pydantic v2
+    db_sweet = models.Sweet(**sweet.model_dump())  
     db.add(db_sweet)
     db.commit()
     db.refresh(db_sweet)
@@ -39,10 +38,8 @@ def delete_sweet(db: Session, sweet_id: int):
     return True
 
 
-# ----- USERS -----
 def create_user(db: Session, user: schemas.UserCreate):
-    # Hash password safely
-    hashed_password = get_password_hash(user.password[:72])  # truncate to 72 chars
+    hashed_password = get_password_hash(user.password[:72])      
     db_user = models.User(username=user.username, password=hashed_password)
     db.add(db_user)
     db.commit()
