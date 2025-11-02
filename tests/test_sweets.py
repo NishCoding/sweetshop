@@ -9,7 +9,6 @@ from app.database import Base
 
 class TestSweetCRUD(unittest.TestCase):
     def setUp(self):
-        # Create a new in-memory SQLite DB for each test run
         self.engine = create_engine("sqlite:///:memory:", connect_args={"check_same_thread": False})
         TestingSessionLocal = sessionmaker(bind=self.engine)
         Base.metadata.create_all(bind=self.engine)
