@@ -1,15 +1,15 @@
-# 🍬 Sweet Shop Management System (FastAPI)
+#  Sweet Shop Management System (FastAPI)
 
 A backend system for managing sweets inventory and user authentication, built using **FastAPI** and **TDD** principles.
 
-## 🚀 Setup
+##  Setup
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
-## ✅ Features Implemented
+## Features Implemented
 
 - User Registration & JWT Login
 - Role-based Authorization (Admin)
@@ -18,4 +18,4 @@ pip install -r requirements.txt
 - Test-Driven Development (unittest)
 - 100% Pydantic v2 compatibility
 
-## 🧪 Run Tests
+##  Run Tests
