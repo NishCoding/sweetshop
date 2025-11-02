@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-# ----- SWEETS -----
+
 class SweetBase(BaseModel):
     name: str
     category: str
@@ -17,7 +17,6 @@ class Sweet(SweetBase):
         from_attributes = True  # Replaces orm_mode
 
 
-# ----- USERS -----
 class UserBase(BaseModel):
     username: str
 
