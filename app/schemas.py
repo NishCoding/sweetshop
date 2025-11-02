@@ -14,7 +14,7 @@ class Sweet(SweetBase):
     id: int
 
     class Config:
-        from_attributes = True  # Replaces orm_mode
+        from_attributes = True 
 
 
 class UserBase(BaseModel):
