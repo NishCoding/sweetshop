@@ -9,7 +9,6 @@ from app.database import Base
 
 class TestInventory(unittest.TestCase):
     def setUp(self):
-        # Fresh DB each time to avoid UNIQUE conflicts
         self.engine = create_engine("sqlite:///:memory:", connect_args={"check_same_thread": False})
         TestingSessionLocal = sessionmaker(bind=self.engine)
         Base.metadata.create_all(bind=self.engine)
